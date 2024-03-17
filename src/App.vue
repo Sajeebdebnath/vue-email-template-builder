@@ -9,7 +9,7 @@
       <EmailEditor
         ref="emailEditor"
         v-on:load="editorLoaded"
-        style="height: 1000px"
+        style="height: 800px"
       />
     </div>
   </div>
@@ -27,7 +27,7 @@ export default {
   methods: {
     editorLoaded() {
       // Pass your template JSON here
-      // this.$refs.emailEditor.editor.loadDesign({});
+      this.$refs.emailEditor.editor.loadDesign({});
     },
     exportHtml() {
       this.$refs.emailEditor.editor.exportHtml((data) => {
